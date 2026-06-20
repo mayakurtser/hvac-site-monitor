@@ -72,12 +72,7 @@ export function Logo({ className, title = BRAND_NAME }: LogoProps) {
   const gradientId = useId();
 
   return (
-    <svg
-      className={cn(styles.root, className)}
-      viewBox="0 0 180 42"
-      role="img"
-      aria-label={title}
-    >
+    <svg className={cn(styles.root, className)} viewBox="0 0 180 42" role="img" aria-label={title}>
       <defs>
         <linearGradient
           id={gradientId}

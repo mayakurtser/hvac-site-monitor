@@ -35,7 +35,9 @@ describe('SiteDetailPage breadcrumb', () => {
   });
 
   it('points back to the search results when opened from search', async () => {
-    renderDetail('/sites/lakeside-mall', { from: { label: 'Search results', href: '/search?q=lakeside' } });
+    renderDetail('/sites/lakeside-mall', {
+      from: { label: 'Search results', href: '/search?q=lakeside' },
+    });
 
     await screen.findByRole('heading', { level: 1, name: 'Lakeside Mall' });
     const link = within(screen.getByRole('navigation', { name: 'Breadcrumb' })).getByRole('link');

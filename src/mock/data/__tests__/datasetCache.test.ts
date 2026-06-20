@@ -34,7 +34,9 @@ const FIXTURE: Site[] = [
     avgTemp: null,
     setpoint: 21,
     alerts: 1,
-    alertList: [{ id: 'x1', desc: 'Compressor fault', severity: 'critical', at: 1_700_000_000_000 }],
+    alertList: [
+      { id: 'x1', desc: 'Compressor fault', severity: 'critical', at: 1_700_000_000_000 },
+    ],
     trend: null,
   },
 ];
@@ -62,7 +64,10 @@ describe('datasetCache', () => {
   });
 
   it('returns undefined when the version does not match', () => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: DATASET_VERSION + 1, sites: FIXTURE }));
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ version: DATASET_VERSION + 1, sites: FIXTURE }),
+    );
     expect(loadDataset()).toBeUndefined();
   });
 
@@ -83,11 +88,17 @@ describe('datasetCache', () => {
 
   it('rejects the whole payload when a site field is invalid', () => {
     const badStatus = [{ ...FIXTURE[0], status: 'bogus' }, FIXTURE[1]];
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: DATASET_VERSION, sites: badStatus }));
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ version: DATASET_VERSION, sites: badStatus }),
+    );
     expect(loadDataset()).toBeUndefined();
 
     const badAvgTemp = [{ ...FIXTURE[0], avgTemp: 'hot' }];
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: DATASET_VERSION, sites: badAvgTemp }));
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ version: DATASET_VERSION, sites: badAvgTemp }),
+    );
     expect(loadDataset()).toBeUndefined();
   });
 
@@ -95,7 +106,10 @@ describe('datasetCache', () => {
     const badSeverity = [
       { ...FIXTURE[1], alertList: [{ id: 'x', desc: 'd', severity: 'bogus', at: 1 }] },
     ];
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: DATASET_VERSION, sites: badSeverity }));
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ version: DATASET_VERSION, sites: badSeverity }),
+    );
     expect(loadDataset()).toBeUndefined();
 
     const badAt = [

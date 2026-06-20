@@ -51,12 +51,25 @@ export function SearchInput({
         aria-label={ariaLabel}
         inputRef={inputRef}
         onChange={(e) => onChange(e.target.value)}
-        onKeyDown={onSubmit ? (e) => { if (e.key === 'Tab') onSubmit(value); } : undefined}
-        trailing={value.length > 0 ? (
-          <button type="button" className={styles.clear} aria-label={clearAriaLabel} onClick={handleClear}>
-            <X size={16} />
-          </button>
-        ) : undefined}
+        onKeyDown={
+          onSubmit
+            ? (e) => {
+                if (e.key === 'Tab') onSubmit(value);
+              }
+            : undefined
+        }
+        trailing={
+          value.length > 0 ? (
+            <button
+              type="button"
+              className={styles.clear}
+              aria-label={clearAriaLabel}
+              onClick={handleClear}
+            >
+              <X size={16} />
+            </button>
+          ) : undefined
+        }
       />
     </form>
   );

@@ -22,16 +22,18 @@ export function AppHeader({ title, subtitle, breadcrumb, actions }: AppHeaderPro
             <Link to={breadcrumb.href} className={styles.breadcrumbLink}>
               {breadcrumb.label}
             </Link>
-            <span className={styles.breadcrumbSep} aria-hidden="true">›</span>
-            <span className={styles.breadcrumbCurrent} aria-current="page">{title}</span>
+            <span className={styles.breadcrumbSep} aria-hidden="true">
+              ›
+            </span>
+            <span className={styles.breadcrumbCurrent} aria-current="page">
+              {title}
+            </span>
           </nav>
         )}
         <h1 className={styles.title}>{title}</h1>
         {!!subtitle && <div className={styles.subtitle}>{subtitle}</div>}
       </div>
-      <div className={styles.actions}>
-        {actions ?? <RefreshButton />}
-      </div>
+      <div className={styles.actions}>{actions ?? <RefreshButton />}</div>
     </header>
   );
 }

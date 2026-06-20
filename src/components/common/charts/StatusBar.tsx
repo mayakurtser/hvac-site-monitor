@@ -8,11 +8,11 @@ interface StatusBarProps {
 }
 
 const STATUS_COLOR: Record<SiteStatus, string> = {
-  online:      'var(--success-500)',
-  warning:     'var(--warning-500)',
-  critical:    'var(--error-500)',
+  online: 'var(--success-500)',
+  warning: 'var(--warning-500)',
+  critical: 'var(--error-500)',
   maintenance: 'var(--blue-500)',
-  offline:     'var(--gray-400)',
+  offline: 'var(--gray-400)',
 };
 
 export function StatusBar({ counts }: StatusBarProps) {
@@ -34,10 +34,7 @@ export function StatusBar({ counts }: StatusBarProps) {
     >
       <div className={styles.track}>
         {segments.map((c) => (
-          <div
-            key={c.k}
-            style={{ width: `${(c.n / total) * 100}%`, background: c.color }}
-          />
+          <div key={c.k} style={{ width: `${(c.n / total) * 100}%`, background: c.color }} />
         ))}
       </div>
       <div className={styles.legend}>

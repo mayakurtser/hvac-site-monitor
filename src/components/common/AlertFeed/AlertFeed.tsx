@@ -56,7 +56,9 @@ export function AlertFeed({ items, emptyTitle, emptyDescription }: AlertFeedProp
     return (
       <div className={styles.empty}>
         <div className={styles.emptyTitle}>{emptyTitle ?? t('alertFeed.emptyTitle')}</div>
-        <div className={styles.emptyDesc}>{emptyDescription ?? t('alertFeed.emptyDescription')}</div>
+        <div className={styles.emptyDesc}>
+          {emptyDescription ?? t('alertFeed.emptyDescription')}
+        </div>
       </div>
     );
   }

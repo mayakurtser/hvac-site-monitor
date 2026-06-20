@@ -2,8 +2,10 @@ import React from 'react';
 import { cn } from '@/utils/cn';
 import styles from './Toggle.module.css';
 
-export interface ToggleProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'type' | 'checked'> {
+export interface ToggleProps extends Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'onChange' | 'type' | 'checked'
+> {
   checked: boolean;
   onChange: (checked: boolean) => void;
 }

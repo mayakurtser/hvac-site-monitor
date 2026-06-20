@@ -21,7 +21,12 @@ export function UnitDonut({ indoor, outdoor, controllers }: UnitDonutProps) {
   const segments = [
     { key: 'indoor', label: t('charts.indoor'), value: indoor, dot: styles.dotIndoor },
     { key: 'outdoor', label: t('charts.outdoor'), value: outdoor, dot: styles.dotOutdoor },
-    { key: 'controllers', label: t('charts.controllers'), value: controllers, dot: styles.dotControllers },
+    {
+      key: 'controllers',
+      label: t('charts.controllers'),
+      value: controllers,
+      dot: styles.dotControllers,
+    },
   ];
 
   const options = useMemo<Highcharts.Options>(

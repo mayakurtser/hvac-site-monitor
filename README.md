@@ -48,24 +48,24 @@ columns rather than reflowing into cards.
 
 ## Tech Stack
 
-| Layer | Choice |
-|---|---|
-| Framework | Vite + React 19 + React Router v7 |
-| Language | TypeScript (strict) |
-| Styling | CSS Modules + CSS custom-property design tokens |
-| State | Redux Toolkit |
-| Table logic | TanStack Table v8 (headless) |
-| Charts | Highcharts (token-themed at runtime via `useChartTheme`, with the accessibility module) |
-| Icons | lucide-react |
-| i18n | i18next + react-i18next |
-| Tests | Vitest + React Testing Library (jsdom) |
+| Layer       | Choice                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------- |
+| Framework   | Vite + React 19 + React Router v7                                                       |
+| Language    | TypeScript (strict)                                                                     |
+| Styling     | CSS Modules + CSS custom-property design tokens                                         |
+| State       | Redux Toolkit                                                                           |
+| Table logic | TanStack Table v8 (headless)                                                            |
+| Charts      | Highcharts (token-themed at runtime via `useChartTheme`, with the accessibility module) |
+| Icons       | lucide-react                                                                            |
+| i18n        | i18next + react-i18next                                                                 |
+| Tests       | Vitest + React Testing Library (jsdom)                                                  |
 
 ## Assumptions Made
 
 - **No real backend.** Data comes from an in-memory dataset (`src/mock/data/`) served through an async service layer (`src/mock/services/`) that simulates network latency. This service layer is the seam where a real REST/GraphQL client would slot in without touching any UI code.
 - **Status is a fixed five-value enum** — `online`, `warning`, `critical`, `maintenance`, `offline`. "Needs attention" aggregates warning + critical + offline.
 - **Active alert count** is the number of alerts attached to a site; alert severities are `critical` / `warning` / `info`.
-- **Search matches site name *and* customer name** (case-insensitive substring). Site-name search is the baseline; customer is included as a natural operator expectation.
+- **Search matches site name _and_ customer name** (case-insensitive substring). Site-name search is the baseline; customer is included as a natural operator expectation.
 - **Sorting is single-column** (toggle asc/desc per header) across all dashboard columns. Multi-column sort adds UX complexity for little gain here, so it's deferred.
 - **Pagination is handled in the mock service** (the API seam), not in the UI: `fetchSites` accepts `page`/`pageSize` and returns a single page plus a `total` count — exactly like a real paginated endpoint — so the UI never holds the full set and swapping in a real API needs no component change.
 - **The mock dataset is generated once and cached to `localStorage`** (under `hvac.mock.dataset`, behind a `DATASET_VERSION` marker). Alert timestamps are anchored at generation time, so relative labels ("12 min ago") and the whole dataset stay stable across full page reloads — not just within a session. It's regenerated only when the cache is absent, invalid/corrupted, or `DATASET_VERSION` is bumped (required whenever the seed data or the `Site`/`SiteAlert` shape changes).
@@ -81,6 +81,7 @@ columns rather than reflowing into cards.
 **How they were used.** For scaffolding components and their CSS-module/token boilerplate, generating the representative mock dataset, drafting tests and i18n keys, and as a review/pair-programming partner during refactors. Work was iterative — the developer directed the architecture, prompted for specific changes, and reviewed every diff.
 
 **Decisions influenced by AI.** Several structural choices were discussed with and partly suggested by Claude, then ratified by the developer:
+
 - The **portable design-system boundary** (no app imports) and the one-way dependency rule `pages → components/common → design-system`.
 - The **headless-table + CSS-module-shell** pattern (TanStack owns sorting/pagination logic; our primitives own every pixel — shadcn-style).
 - The **service-seam** approach (`siteService`/`alertService`) that keeps the app mockable and swappable for a real client.
@@ -91,7 +92,7 @@ All submitted code can be explained and discussed.
 ## Architecture & Conventions
 
 - **[`ARCHITECTURE.md`](./ARCHITECTURE.md)** — the structural decisions and their rationale: the project-structure layering, how the app scales, the state-management choice, and team practices (coding standards, PR process, testing strategy, CI/CD).
-- **[`CLAUDE.md`](./CLAUDE.md)** — the coding conventions and standards (styling/tokens, component & file/folder naming, imports, state, i18n, and the design-system boundary). The single source of truth for *how we write code here*.
+- **[`CLAUDE.md`](./CLAUDE.md)** — the coding conventions and standards (styling/tokens, component & file/folder naming, imports, state, i18n, and the design-system boundary). The single source of truth for _how we write code here_.
 
 ## Internationalization
 

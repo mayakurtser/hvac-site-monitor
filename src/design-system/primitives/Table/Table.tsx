@@ -3,7 +3,13 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import styles from './Table.module.css';
 
-export function TableWrap({ children, className }: { children: React.ReactNode; className?: string }) {
+export function TableWrap({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return <div className={cn(styles.tableWrap, className)}>{children}</div>;
 }
 
@@ -32,7 +38,13 @@ export function TableRow({ children, onClick, className }: TableRowProps) {
       onClick={onClick}
       style={onClick ? { cursor: 'pointer' } : undefined}
       tabIndex={onClick ? 0 : undefined}
-      onKeyDown={onClick ? (e) => { if (e.key === 'Enter') onClick(); } : undefined}
+      onKeyDown={
+        onClick
+          ? (e) => {
+              if (e.key === 'Enter') onClick();
+            }
+          : undefined
+      }
       role={onClick ? 'button' : undefined}
     >
       {children}
@@ -57,7 +69,14 @@ interface SortHeaderCellProps {
   className?: string;
 }
 
-export function TableHeaderCell({ children, sorted, onSort, align, hideOnMobile, className }: SortHeaderCellProps) {
+export function TableHeaderCell({
+  children,
+  sorted,
+  onSort,
+  align,
+  hideOnMobile,
+  className,
+}: SortHeaderCellProps) {
   const classes = cn(alignClass(align), hideOnMobile && styles.hideOnMobile, className);
   if (onSort) {
     return (
@@ -91,7 +110,14 @@ interface TableCellProps {
 
 export function TableCell({ children, strong, align, hideOnMobile, className }: TableCellProps) {
   return (
-    <td className={cn(strong && styles.strong, alignClass(align), hideOnMobile && styles.hideOnMobile, className)}>
+    <td
+      className={cn(
+        strong && styles.strong,
+        alignClass(align),
+        hideOnMobile && styles.hideOnMobile,
+        className,
+      )}
+    >
       {children}
     </td>
   );

@@ -65,7 +65,9 @@
   font-size: var(--text-md);
   font-weight: var(--weight-semibold);
   color: var(--text-tertiary);
-  transition: background 0.12s, color 0.12s;
+  transition:
+    background 0.12s,
+    color 0.12s;
   text-decoration: none;
 }
 

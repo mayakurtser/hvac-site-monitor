@@ -29,7 +29,11 @@ export function DashboardPage() {
 
   const handleSortingChange: OnChangeFn<SortingState> = (updater) => {
     const col = functionalUpdate(updater, sorting)[0];
-    dispatch(setSort(col ? { sort: col.id, order: col.desc ? 'desc' : 'asc' } : { sort: '', order: 'asc' }));
+    dispatch(
+      setSort(
+        col ? { sort: col.id, order: col.desc ? 'desc' : 'asc' } : { sort: '', order: 'asc' },
+      ),
+    );
   };
 
   const statusOptions = useMemo(

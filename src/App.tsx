@@ -22,9 +22,5 @@ export function App() {
 
 function NotFound() {
   const { t } = useTranslation();
-  return (
-    <div className={styles.notFound}>
-      {t('errors.pageNotFound')}
-    </div>
-  );
+  return <div className={styles.notFound}>{t('errors.pageNotFound')}</div>;
 }

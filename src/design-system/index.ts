@@ -5,7 +5,15 @@ export { Card } from './primitives/Card';
 export { Input } from './primitives/Input';
 export { Select } from './primitives/Select';
 export { Toggle } from './primitives/Toggle';
-export { Table, TableWrap, TableHead, TableBody, TableRow, TableHeaderCell, TableCell } from './primitives/Table';
+export {
+  Table,
+  TableWrap,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableHeaderCell,
+  TableCell,
+} from './primitives/Table';
 export { FeaturedIcon } from './primitives/FeaturedIcon';
 
 // Components (app-agnostic, composed from primitives)

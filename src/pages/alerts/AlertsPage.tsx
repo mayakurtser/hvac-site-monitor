@@ -57,7 +57,10 @@ export function AlertsPage() {
 
   const prevQuery = useRef({ search: debouncedSearch, severity: severityFilter });
   useEffect(() => {
-    if (prevQuery.current.search === debouncedSearch && prevQuery.current.severity === severityFilter) {
+    if (
+      prevQuery.current.search === debouncedSearch &&
+      prevQuery.current.severity === severityFilter
+    ) {
       return;
     }
     prevQuery.current = { search: debouncedSearch, severity: severityFilter };

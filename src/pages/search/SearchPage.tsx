@@ -24,14 +24,24 @@ export function SearchPage() {
   const { sites, isLoading } = useGlobalSearch(query);
 
   const siteColumns = useStaticColumns(useSiteColumns());
-  const origin = { label: t('search.title'), href: hasQuery ? `/search?q=${encodeURIComponent(query)}` : '/search' };
+  const origin = {
+    label: t('search.title'),
+    href: hasQuery ? `/search?q=${encodeURIComponent(query)}` : '/search',
+  };
 
   function renderResults() {
     if (!hasQuery) {
-      return <EmptyState title={t('search.noQueryTitle')} description={t('search.noQueryDescription')} />;
+      return (
+        <EmptyState title={t('search.noQueryTitle')} description={t('search.noQueryDescription')} />
+      );
     }
     if (!isLoading && sites.length === 0) {
-      return <EmptyState title={t('search.emptyTitle')} description={t('search.emptyDescription', { query })} />;
+      return (
+        <EmptyState
+          title={t('search.emptyTitle')}
+          description={t('search.emptyDescription', { query })}
+        />
+      );
     }
     return (
       <DataTable
@@ -46,7 +56,9 @@ export function SearchPage() {
   return (
     <AppShell
       title={t('search.title')}
-      subtitle={hasQuery ? t('search.subtitle', { count: sites.length, query }) : t('search.prompt')}
+      subtitle={
+        hasQuery ? t('search.subtitle', { count: sites.length, query }) : t('search.prompt')
+      }
       breadcrumb={{ label: t('nav.sites'), href: '/' }}
       actions={
         <Button hierarchy="secondaryGray" onClick={() => navigate(-1)}>

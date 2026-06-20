@@ -42,7 +42,9 @@
   border-radius: var(--radius-md);
   color: var(--fg-quaternary);
   text-decoration: none;
-  transition: background 0.12s, color 0.12s;
+  transition:
+    background 0.12s,
+    color 0.12s;
 }
 
 .navItem:hover {

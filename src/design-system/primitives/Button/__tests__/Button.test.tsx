@@ -41,9 +41,7 @@ describe('Button', () => {
   });
 
   it('applies secondary-gray hierarchy class', () => {
-    const { container } = render(
-      <Button hierarchy="secondaryGray">Cancel</Button>,
-    );
+    const { container } = render(<Button hierarchy="secondaryGray">Cancel</Button>);
     const el = container.firstChild as HTMLElement;
     expect(el.className).toMatch(/secondaryGray/);
   });
