@@ -88,10 +88,7 @@ export function DataTable<TData>({
       );
     }
     return rows.map((row) => (
-      <TableRow
-        key={row.id}
-        onClick={onRowClick ? () => onRowClick(row.original) : undefined}
-      >
+      <TableRow key={row.id} onClick={onRowClick ? () => onRowClick(row.original) : undefined}>
         {row.getVisibleCells().map((cell) => (
           <TableCell
             key={cell.id}
@@ -109,32 +106,32 @@ export function DataTable<TData>({
     <TableWrap>
       {toolbar}
       <Table>
-          <TableHead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  const canSort = header.column.getCanSort();
-                  const sorted = header.column.getIsSorted();
-                  return (
-                    <TableHeaderCell
-                      key={header.id}
-                      sorted={canSort ? sorted : undefined}
-                      onSort={canSort ? () => header.column.toggleSorting() : undefined}
-                      align={header.column.columnDef.meta?.align}
-                      hideOnMobile={header.column.columnDef.meta?.hideOnMobile}
-                    >
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(header.column.columnDef.header, header.getContext())}
-                    </TableHeaderCell>
-                  );
-                })}
-              </TableRow>
-            ))}
-          </TableHead>
-          <TableBody>{renderBody()}</TableBody>
-        </Table>
-        {footer}
-      </TableWrap>
+        <TableHead>
+          {table.getHeaderGroups().map((headerGroup) => (
+            <TableRow key={headerGroup.id}>
+              {headerGroup.headers.map((header) => {
+                const canSort = header.column.getCanSort();
+                const sorted = header.column.getIsSorted();
+                return (
+                  <TableHeaderCell
+                    key={header.id}
+                    sorted={canSort ? sorted : undefined}
+                    onSort={canSort ? () => header.column.toggleSorting() : undefined}
+                    align={header.column.columnDef.meta?.align}
+                    hideOnMobile={header.column.columnDef.meta?.hideOnMobile}
+                  >
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(header.column.columnDef.header, header.getContext())}
+                  </TableHeaderCell>
+                );
+              })}
+            </TableRow>
+          ))}
+        </TableHead>
+        <TableBody>{renderBody()}</TableBody>
+      </Table>
+      {footer}
+    </TableWrap>
   );
 }

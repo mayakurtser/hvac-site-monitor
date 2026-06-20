@@ -21,9 +21,7 @@ describe('i18n', () => {
   });
 
   it('interpolates named values', () => {
-    expect(i18n.t('pager.showing', { from: 1, to: 10, total: 42 })).toBe(
-      'Showing 1–10 of 42',
-    );
+    expect(i18n.t('pager.showing', { from: 1, to: 10, total: 42 })).toBe('Showing 1–10 of 42');
   });
 
   it('falls back to the key when a translation is missing', () => {

@@ -10,7 +10,14 @@ export function useSites() {
 
   useEffect(() => {
     dispatch(
-      fetchSites({ page, pageSize: PAGE_SIZE, sort, order, search: searchQuery, status: statusFilter }),
+      fetchSites({
+        page,
+        pageSize: PAGE_SIZE,
+        sort,
+        order,
+        search: searchQuery,
+        status: statusFilter,
+      }),
     );
   }, [dispatch, page, sort, order, searchQuery, statusFilter]);
 

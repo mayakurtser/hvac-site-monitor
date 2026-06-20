@@ -52,7 +52,9 @@ describe('UnitDonut', () => {
     renderDonut(12, 5, 3);
     const series = captured.options?.series?.[0];
     expect(series && 'type' in series ? series.type : undefined).toBe('pie');
-    const data = (series && 'data' in series ? series.data : []) as unknown as Array<{ y?: number }>;
+    const data = (series && 'data' in series ? series.data : []) as unknown as Array<{
+      y?: number;
+    }>;
     expect(data.map((p) => p.y)).toEqual([12, 5, 3]);
   });
 });

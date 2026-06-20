@@ -42,20 +42,36 @@ describe('SearchInput', () => {
   });
 
   it('hides the clear button when the value is empty', () => {
-    render(<SearchInput value="" onChange={() => {}} ariaLabel="Search" clearAriaLabel="Clear search" />);
+    render(
+      <SearchInput value="" onChange={() => {}} ariaLabel="Search" clearAriaLabel="Clear search" />,
+    );
 
     expect(screen.queryByRole('button', { name: 'Clear search' })).toBeNull();
   });
 
   it('shows the clear button when there is a value', () => {
-    render(<SearchInput value="acme" onChange={() => {}} ariaLabel="Search" clearAriaLabel="Clear search" />);
+    render(
+      <SearchInput
+        value="acme"
+        onChange={() => {}}
+        ariaLabel="Search"
+        clearAriaLabel="Clear search"
+      />,
+    );
 
     expect(screen.getByRole('button', { name: 'Clear search' })).toBeInTheDocument();
   });
 
   it('clears the value when the clear button is clicked', async () => {
     const onChange = vi.fn();
-    render(<SearchInput value="acme" onChange={onChange} ariaLabel="Search" clearAriaLabel="Clear search" />);
+    render(
+      <SearchInput
+        value="acme"
+        onChange={onChange}
+        ariaLabel="Search"
+        clearAriaLabel="Clear search"
+      />,
+    );
 
     await userEvent.click(screen.getByRole('button', { name: 'Clear search' }));
 
@@ -65,7 +81,13 @@ describe('SearchInput', () => {
   it('does not submit when the clear button is clicked', async () => {
     const onSubmit = vi.fn();
     render(
-      <SearchInput value="acme" onChange={() => {}} onSubmit={onSubmit} ariaLabel="Search" clearAriaLabel="Clear search" />,
+      <SearchInput
+        value="acme"
+        onChange={() => {}}
+        onSubmit={onSubmit}
+        ariaLabel="Search"
+        clearAriaLabel="Clear search"
+      />,
     );
 
     await userEvent.click(screen.getByRole('button', { name: 'Clear search' }));
@@ -74,7 +96,14 @@ describe('SearchInput', () => {
   });
 
   it('returns focus to the input after clearing', async () => {
-    render(<SearchInput value="acme" onChange={() => {}} ariaLabel="Search" clearAriaLabel="Clear search" />);
+    render(
+      <SearchInput
+        value="acme"
+        onChange={() => {}}
+        ariaLabel="Search"
+        clearAriaLabel="Clear search"
+      />,
+    );
 
     await userEvent.click(screen.getByRole('button', { name: 'Clear search' }));
 

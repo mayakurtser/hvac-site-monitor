@@ -19,7 +19,9 @@
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-xs);
-  transition: box-shadow 0.12s, border-color 0.12s;
+  transition:
+    box-shadow 0.12s,
+    border-color 0.12s;
 }
 
 .inputWrap:focus-within {
@@ -34,8 +36,12 @@
   box-shadow: var(--shadow-xs), var(--ring-error);
 }
 
-.sm { padding: 8px 12px; }
-.md { padding: 10px 14px; }
+.sm {
+  padding: 8px 12px;
+}
+.md {
+  padding: 10px 14px;
+}
 
 .input {
   flex: 1;
@@ -48,7 +54,9 @@
   line-height: var(--leading-md);
   color: var(--text-primary);
 }
-.input::placeholder { color: var(--text-placeholder); }
+.input::placeholder {
+  color: var(--text-placeholder);
+}
 
 .icon {
   color: var(--fg-quaternary);
@@ -66,4 +74,6 @@
   font-size: var(--text-sm);
   color: var(--text-tertiary);
 }
-.hintError { color: var(--text-error-primary); }
+.hintError {
+  color: var(--text-error-primary);
+}

@@ -4,11 +4,11 @@ import { Badge } from '@/design-system';
 import type { SiteStatus } from '@/types/site';
 
 const STATUS_COLOR: Record<SiteStatus, 'success' | 'warning' | 'error' | 'blue' | 'gray'> = {
-  online:      'success',
-  warning:     'warning',
-  critical:    'error',
+  online: 'success',
+  warning: 'warning',
+  critical: 'error',
   maintenance: 'blue',
-  offline:     'gray',
+  offline: 'gray',
 };
 
 interface StatusBadgeProps {

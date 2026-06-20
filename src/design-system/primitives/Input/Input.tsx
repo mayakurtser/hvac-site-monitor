@@ -36,13 +36,7 @@ export function Input({
   return (
     <label className={cn(styles.field, className)} htmlFor={id}>
       {!!label && <span className={styles.label}>{label}</span>}
-      <span
-        className={cn(
-          styles.inputWrap,
-          styles[size],
-          error && styles.inputWrapError,
-        )}
-      >
+      <span className={cn(styles.inputWrap, styles[size], error && styles.inputWrapError)}>
         {IconComp != null && (
           <span className={styles.icon}>
             <IconComp size={20} />
@@ -51,9 +45,7 @@ export function Input({
         <input id={id} ref={inputRef} className={styles.input} {...rest} />
         {trailing != null && <span className={styles.trailing}>{trailing}</span>}
       </span>
-      {!!hintText && (
-        <span className={cn(styles.hint, error && styles.hintError)}>{hintText}</span>
-      )}
+      {!!hintText && <span className={cn(styles.hint, error && styles.hintError)}>{hintText}</span>}
     </label>
   );
 }

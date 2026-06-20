@@ -35,7 +35,15 @@ function SectionTitle({ children, right }: { children: React.ReactNode; right?: 
   );
 }
 
-function InfoRow({ label, children, last }: { label: string; children: React.ReactNode; last?: boolean }) {
+function InfoRow({
+  label,
+  children,
+  last,
+}: {
+  label: string;
+  children: React.ReactNode;
+  last?: boolean;
+}) {
   return (
     <div className={last ? styles.infoRowLast : styles.infoRow}>
       <span className={styles.infoLabel}>{label}</span>
@@ -75,9 +83,7 @@ export function SiteDetailPage() {
     return (
       <AppShell title={t('siteDetail.notFoundTitle')} breadcrumb={backCrumb} actions={backAction}>
         <div className={styles.errorWrap}>
-          <p className={styles.errorText}>
-            {t('siteDetail.notFound')}
-          </p>
+          <p className={styles.errorText}>{t('siteDetail.notFound')}</p>
         </div>
       </AppShell>
     );

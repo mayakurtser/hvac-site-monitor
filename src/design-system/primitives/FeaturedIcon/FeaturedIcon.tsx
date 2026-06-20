@@ -24,9 +24,9 @@ const SIZES = {
 };
 
 const COLORS: Record<FeaturedIconColor, [string, string, string]> = {
-  brand:   ['var(--brand-50)',   'var(--brand-100)',   'var(--brand-600)'],
-  gray:    ['var(--gray-50)',    'var(--gray-100)',    'var(--gray-600)'],
-  error:   ['var(--error-50)',   'var(--error-100)',   'var(--error-600)'],
+  brand: ['var(--brand-50)', 'var(--brand-100)', 'var(--brand-600)'],
+  gray: ['var(--gray-50)', 'var(--gray-100)', 'var(--gray-600)'],
+  error: ['var(--error-50)', 'var(--error-100)', 'var(--error-600)'],
   warning: ['var(--warning-50)', 'var(--warning-100)', 'var(--warning-600)'],
   success: ['var(--success-50)', 'var(--success-100)', 'var(--success-600)'],
 };
@@ -36,7 +36,9 @@ function LucideIcon({ name, size }: { name: string; size: number }) {
     .split('-')
     .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
     .join('');
-  const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number }>>)[pascalName];
+  const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ size?: number }>>)[
+    pascalName
+  ];
   return Icon ? <Icon size={size} /> : null;
 }
 
