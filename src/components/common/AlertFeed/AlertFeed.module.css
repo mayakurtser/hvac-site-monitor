@@ -1,0 +1,60 @@
+.bleed {
+  margin: 0 -24px;
+}
+
+.descCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.iconCritical {
+  color: var(--error-500);
+}
+
+.iconWarning {
+  color: var(--warning-500);
+}
+
+.iconInfo {
+  color: var(--gray-400);
+}
+
+.descText {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.thRight {
+  display: block;
+  text-align: right;
+}
+
+.timestamp {
+  display: block;
+  text-align: right;
+  white-space: nowrap;
+  color: var(--text-tertiary);
+}
+
+.empty {
+  padding: 32px 8px;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.emptyDesc {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}

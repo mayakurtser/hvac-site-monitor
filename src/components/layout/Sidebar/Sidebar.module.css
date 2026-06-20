@@ -1,0 +1,103 @@
+.sidebar {
+  width: 264px;
+  flex-shrink: 0;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-secondary);
+  display: flex;
+  flex-direction: column;
+  padding: 22px 16px;
+  overflow-y: auto;
+}
+
+.brand {
+  padding: 0 6px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.brandLogo {
+  height: 26px;
+}
+
+.brandTagline {
+  font-size: 9px;
+  color: var(--text-tertiary);
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-left: 2px;
+}
+
+.sidebarSearch {
+  margin: 0;
+  padding: 18px 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.navFoot {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 16px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--text-tertiary);
+  transition: background 0.12s, color 0.12s;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  background: var(--bg-active, var(--gray-50));
+}
+
+.navItemActive {
+  color: var(--text-brand-secondary, var(--brand-700));
+  background: var(--bg-brand-primary, var(--brand-50));
+}
+
+.navItemActive:hover {
+  background: var(--bg-brand-primary, var(--brand-50));
+}
+
+.navLabel {
+  flex: 1;
+}
+
+.navIcon {
+  color: var(--fg-quaternary);
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.navIconActive {
+  color: var(--fg-brand, var(--brand-600));
+}
+
+@media (max-width: 820px) {
+  .sidebar {
+    display: none;
+  }
+}

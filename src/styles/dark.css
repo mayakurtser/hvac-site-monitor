@@ -1,0 +1,89 @@
+/* Dark mode — scoped to [data-theme="dark"] on <html> */
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --bg-primary: #161e2b;
+  --bg-secondary: #0c111d;
+  --bg-secondary-alt: #0c111d;
+  --bg-tertiary: #1f2937;
+  --bg-quaternary: #344054;
+  --bg-active: #1f2937;
+  --bg-disabled: #1f2937;
+  --bg-disabled-subtle: #161e2b;
+  --bg-overlay: rgba(8, 11, 18, 0.72);
+
+  /* Text */
+  --text-primary: #f5f6f8;
+  --text-secondary: #cdd3dd;
+  --text-tertiary: #98a2b3;
+  --text-quaternary: #7c8595;
+  --text-disabled: #5d6675;
+  --text-placeholder: #7c8595;
+
+  /* Foreground (icons) */
+  --fg-primary: #f5f6f8;
+  --fg-secondary: #cdd3dd;
+  --fg-tertiary: #98a2b3;
+  --fg-quaternary: #7c8595;
+  --fg-quinary: #5d6675;
+  --fg-disabled: #5d6675;
+
+  /* Borders */
+  --border-primary: #344054;
+  --border-secondary: #1f2937;
+  --border-tertiary: #161e2b;
+  --border-disabled: #344054;
+
+  /* Brand (teal — brightened for dark surfaces) */
+  --fg-brand: #2dd4bf;
+  --text-brand-primary: #5fe9d0;
+  --text-brand-secondary: #5fe9d0;
+  --text-brand-tertiary: #2dd4bf;
+  --bg-brand-primary: #0e302c;
+  --bg-brand-secondary: #134e48;
+  --bg-brand-solid: #0e9384;
+  --bg-brand-solid-hover: #15b79e;
+  --border-brand: #107569;
+  --border-brand-solid: #15b79e;
+  --ring-brand: 0px 0px 0px 4px rgba(21, 183, 158, 0.30);
+
+  /* Status semantic backgrounds */
+  --bg-error-primary: #3b1714;
+  --bg-warning-primary: #3a2509;
+  --bg-success-primary: #10291d;
+  --text-error-primary: #fda29b;
+  --text-warning-primary: #fec84b;
+  --text-success-primary: #6ce9a6;
+  --fg-error: #f97066;
+  --fg-warning: #fdb022;
+  --fg-success: #32d583;
+
+  /* Component tint primitives (Badge / FeaturedIcon) */
+  --gray-50: #1f2937;
+  --gray-100: #1f2937;
+  --gray-200: #344054;
+  --gray-600: #98a2b3;
+  --gray-700: #cdd3dd;
+  --error-50: #3b1714;
+  --error-100: #4d1d17;
+  --error-200: #6b2620;
+  --error-700: #fda29b;
+  --warning-50: #3a2509;
+  --warning-100: #4d310b;
+  --warning-200: #6b440e;
+  --warning-700: #fec84b;
+  --success-50: #10291d;
+  --success-100: #143626;
+  --success-200: #1d4a33;
+  --success-700: #6ce9a6;
+  --blue-50: #102a4d;
+  --blue-100: #14315b;
+  --blue-200: #1d4a7a;
+  --blue-700: #84caff;
+}
+
+/* Dark mode hover state for table rows */
+[data-theme='dark'] .hvac-row:hover {
+  background: var(--bg-tertiary);
+}

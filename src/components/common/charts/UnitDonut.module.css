@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.chartWrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.chart {
+  width: 140px;
+  height: 140px;
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.centerTotal {
+  font-size: var(--text-display-xs);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.centerLabel {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.dotIndoor {
+  background: var(--brand-600);
+}
+
+.dotOutdoor {
+  background: var(--blue-500);
+}
+
+.dotControllers {
+  background: var(--gray-400);
+}
+
+.legendLabel {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  min-width: 92px;
+}
+
+.legendValue {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}

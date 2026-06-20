@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "tagline": "The Internet of Climate"
+  },
+  "nav": {
+    "sites": "Sites",
+    "alerts": "Alerts"
+  },
+  "appShell": {
+    "searchPlaceholder": "Search sites…",
+    "searchAria": "Search sites",
+    "darkMode": "Dark mode",
+    "refresh": "Refresh",
+    "mainNav": "Main navigation",
+    "breadcrumb": "Breadcrumb"
+  },
+  "common": {
+    "noResultsTitle": "No results found",
+    "noResultsDescription": "Try adjusting your search or filter to find what you're looking for.",
+    "tryAdjusting": "Try adjusting your search or filter.",
+    "clearSearch": "Clear search"
+  },
+  "status": {
+    "online": "Online",
+    "warning": "Warning",
+    "critical": "Critical",
+    "maintenance": "Maintenance",
+    "offline": "Offline"
+  },
+  "severity": {
+    "critical": "Critical",
+    "warning": "Warning",
+    "info": "Info"
+  },
+  "dashboard": {
+    "title": "Sites",
+    "subtitle_one": "{{count}} site across your fleet",
+    "subtitle_other": "{{count}} sites across your fleet",
+    "manageFleet": "Manage your HVAC fleet",
+    "fleetStatus": "Fleet Status",
+    "stat": {
+      "totalSites": "Total Sites",
+      "totalSitesCaption_one": "across {{count}} customer",
+      "totalSitesCaption_other": "across {{count}} customers",
+      "online": "Online",
+      "onlineCaption": "{{percent}}% healthy",
+      "needAttention": "Need Attention",
+      "needAttentionCaption": "warning · critical · offline",
+      "activeAlerts": "Active Alerts",
+      "activeAlertsCaption_one": "{{count}} critical",
+      "activeAlertsCaption_other": "{{count}} critical"
+    },
+    "searchPlaceholder": "Search sites or customers…",
+    "searchAria": "Search sites",
+    "filterStatusAria": "Filter by status",
+    "allStatuses": "All statuses",
+    "emptyTitle": "No sites found",
+    "siteCount_one": "{{count}} site",
+    "siteCount_other": "{{count}} sites",
+    "col": {
+      "site": "Site",
+      "customer": "Customer",
+      "status": "Status",
+      "units": "Units",
+      "avgTemp": "Avg Temp",
+      "alerts": "Alerts"
+    }
+  },
+  "alerts": {
+    "title": "Alerts",
+    "subtitle": "Recent alerts across all monitored sites.",
+    "stat": {
+      "criticalFoot": "need immediate action",
+      "warningFoot": "monitor closely",
+      "infoFoot": "informational"
+    },
+    "searchPlaceholder": "Search alerts or sites…",
+    "searchAria": "Search alerts",
+    "filterSeverityAria": "Filter by severity",
+    "allSeverities": "All severities",
+    "emptyTitle": "No alerts found",
+    "resultCount": "{{filtered}} of {{total}} alerts",
+    "col": {
+      "description": "Alert description",
+      "severity": "Severity",
+      "site": "Site",
+      "timestamp": "Timestamp"
+    }
+  },
+  "search": {
+    "title": "Search results",
+    "back": "Back",
+    "prompt": "Find sites",
+    "subtitle_one": "{{count}} site matches “{{query}}”",
+    "subtitle_other": "{{count}} sites match “{{query}}”",
+    "noQueryTitle": "Search the fleet",
+    "noQueryDescription": "Find sites by name, customer, or city.",
+    "emptyTitle": "No results found",
+    "emptyDescription": "No sites matched “{{query}}”. Try a different term."
+  },
+  "siteDetail": {
+    "loading": "Loading…",
+    "back": "Back",
+    "backToSites": "Back to sites",
+    "notFoundTitle": "Site not found",
+    "notFound": "Site not found.",
+    "siteInformation": "Site information",
+    "siteName": "Site name",
+    "customer": "Customer",
+    "city": "City",
+    "avgTemperature": "Avg Temperature",
+    "status": "Status",
+    "unitsTotal": "{{value}} total",
+    "unitSummary": "Unit summary",
+    "setpoint": "Setpoint {{value}}°C",
+    "temperatureLast24h": "Temperature — last 24h",
+    "recentAlerts": "Recent alerts",
+    "noRecentAlertsTitle": "No recent alerts",
+    "noRecentAlertsDescription": "This site has no active or recent alerts."
+  },
+  "alertFeed": {
+    "emptyTitle": "No alerts",
+    "emptyDescription": "There are no alerts to display.",
+    "colDescription": "Alert description",
+    "colSeverity": "Severity",
+    "colTimestamp": "Timestamp"
+  },
+  "pager": {
+    "noResults": "No results",
+    "showing": "Showing {{from}}–{{to}} of {{total}}",
+    "previous": "Previous",
+    "previousAria": "Previous page",
+    "next": "Next",
+    "nextAria": "Next page"
+  },
+  "charts": {
+    "noTelemetry": "No telemetry data available",
+    "tempTrendAria": "Temperature over the last 24 hours. Current {{current}}°, setpoint {{setpoint}}°.",
+    "setpointShort": "Setpoint {{value}}°",
+    "unitMixAria": "Unit mix: {{indoor}} indoor, {{outdoor}} outdoor, {{controllers}} controllers, {{total}} total.",
+    "units": "units",
+    "indoor": "Indoor",
+    "outdoor": "Outdoor",
+    "controllers": "Controllers",
+    "fleetStatusAria": "Fleet status: {{summary}}."
+  },
+  "time": {
+    "justNow": "just now",
+    "minutesAgo_one": "{{count}} min ago",
+    "minutesAgo_other": "{{count}} min ago",
+    "hoursAgo_one": "{{count}} hr ago",
+    "hoursAgo_other": "{{count}} hr ago",
+    "daysAgo_one": "{{count}} day ago",
+    "daysAgo_other": "{{count}} days ago"
+  },
+  "errors": {
+    "pageNotFound": "Page not found."
+  }
+}

@@ -1,0 +1,33 @@
+.form {
+  margin: 0;
+}
+
+.grow {
+  flex: 1 1 260px;
+  max-width: 360px;
+}
+
+.clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-1);
+  margin: 0;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  color: var(--fg-quaternary);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.clear:hover {
+  background: var(--bg-secondary);
+  color: var(--fg-secondary);
+}
+
+.clear:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-gray);
+}

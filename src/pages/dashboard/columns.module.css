@@ -1,0 +1,35 @@
+.siteName {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.siteCity {
+  font-size: var(--text-xs);
+  color: var(--text-quaternary);
+  margin-top: 2px;
+}
+
+.customer {
+  color: var(--text-secondary);
+}
+
+.numericCell {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+.tempCell {
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-medium);
+}
+
+.noAlerts {
+  color: var(--text-disabled);
+  font-size: var(--text-sm);
+}
+
+.chevron {
+  color: var(--gray-400);
+  display: inline-flex;
+}

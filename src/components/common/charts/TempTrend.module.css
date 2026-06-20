@@ -1,0 +1,13 @@
+.empty {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  color: var(--text-quaternary);
+}
+
+.chart {
+  display: block;
+  width: 100%;
+}

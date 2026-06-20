@@ -1,0 +1,71 @@
+.mobileBar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.mobileBrand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.mobileBrandLogo {
+  height: 24px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.navItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  color: var(--fg-quaternary);
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+}
+
+.navItem:hover {
+  background: var(--bg-active, var(--gray-50));
+  color: var(--fg-secondary);
+}
+
+.navItemActive {
+  color: var(--fg-brand);
+  background: var(--bg-brand-primary);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+@media (max-width: 820px) {
+  .mobileBar {
+    display: flex;
+  }
+}
