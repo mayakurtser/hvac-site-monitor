@@ -25,6 +25,7 @@ The design system is a **portable** layer: it imports no app code — no `@/stor
 ## State Management: Redux Toolkit
 
 RTK was chosen over React Context because:
+
 - `searchQuery` and `statusFilter` must survive page navigation (Context resets on unmount)
 - Devtools are invaluable for debugging loading/error state transitions
 - `createAsyncThunk` eliminates boilerplate for the loading→success→error lifecycle
@@ -48,7 +49,7 @@ TanStack Table v8 owns sorting/pagination logic; our `Table` primitives own ever
 
 ## Testing Strategy
 
-Unit tests cover design system primitives (Badge, Button) plus an i18n smoke test (`src/i18n/__tests__`). The seam for integration tests is `src/mock/services/siteService.ts` — swap it for a real HTTP client without touching any component.
+Unit tests cover design system primitives (Badge, Button) plus an i18n smoke test (`src/i18n/__tests__`). The seam for integration tests is `src/mock/services/siteService.ts` (and `alertService.ts`) — swap it for a real HTTP client without touching any component.
 
 For 4 developers: PRs require tests for any new primitive. Snapshots are discouraged (fragile). Prefer `getByRole` over `getByTestId`.
 
