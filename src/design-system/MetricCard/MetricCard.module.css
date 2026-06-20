@@ -31,6 +31,18 @@
   color: var(--text-tertiary);
 }
 
+.valueSkeleton {
+  margin-top: var(--spacing-1-5);
+  width: 72px;
+  height: var(--text-display-sm);
+}
+
+.captionSkeleton {
+  margin-top: var(--spacing-1-5);
+  width: 112px;
+  height: var(--text-sm);
+}
+
 .success {
   color: var(--text-success-primary);
   font-weight: var(--weight-semibold);

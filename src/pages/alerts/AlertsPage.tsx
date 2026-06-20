@@ -95,6 +95,7 @@ export function AlertsPage() {
             label={t('severity.critical')}
             value={summary.critical}
             caption={t('alerts.stat.criticalFoot')}
+            loading={isLoading}
           />
           <MetricCard
             icon="alert-circle"
@@ -102,6 +103,7 @@ export function AlertsPage() {
             label={t('severity.warning')}
             value={summary.warning}
             caption={t('alerts.stat.warningFoot')}
+            loading={isLoading}
           />
           <MetricCard
             icon="info"
@@ -109,6 +111,7 @@ export function AlertsPage() {
             label={t('severity.info')}
             value={summary.info}
             caption={t('alerts.stat.infoFoot')}
+            loading={isLoading}
           />
         </div>
 
