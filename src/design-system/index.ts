@@ -5,6 +5,7 @@ export { Card } from './primitives/Card';
 export { Input } from './primitives/Input';
 export { Select } from './primitives/Select';
 export { Toggle } from './primitives/Toggle';
+export { Skeleton } from './primitives/Skeleton';
 export {
   Table,
   TableWrap,

@@ -69,6 +69,7 @@ export function DashboardPage() {
             label={t('dashboard.stat.totalSites')}
             value={summary.total}
             caption={t('dashboard.stat.totalSitesCaption', { count: summary.customers })}
+            loading={isLoading}
           />
           <MetricCard
             icon="check-circle"
@@ -77,6 +78,7 @@ export function DashboardPage() {
             value={summary.online}
             caption={t('dashboard.stat.onlineCaption', { percent: summary.healthPercent })}
             captionTone="success"
+            loading={isLoading}
           />
           <MetricCard
             icon="alert-triangle"
@@ -84,6 +86,7 @@ export function DashboardPage() {
             label={t('dashboard.stat.needAttention')}
             value={summary.attention}
             caption={t('dashboard.stat.needAttentionCaption')}
+            loading={isLoading}
           />
           <MetricCard
             icon="bell"
@@ -92,6 +95,7 @@ export function DashboardPage() {
             value={summary.alerts}
             caption={t('dashboard.stat.activeAlertsCaption', { count: summary.criticalAlerts })}
             captionTone="error"
+            loading={isLoading}
           />
         </div>
 
